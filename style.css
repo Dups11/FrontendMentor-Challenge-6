@@ -1,0 +1,201 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    
+}
+
+.background {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1440px;
+    height: 800px;
+    background-color: hsl(210, 46%, 95%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.card {
+    position: relative;
+    width: 730px;
+    height: 280px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: white;
+    display: flex;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    /* overflow: hidden; */
+}
+
+.image-container img{
+    width: 285px;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+    filter: brightness(0.9) contrast(1.1);
+    -webkit-filter: brightness(1.1) contrast(0.9);
+    border-radius: 10px 0 0 10px;
+    -webkit-border-radius: 10px 0 0 10px;
+    -moz-border-radius: 10px 0 0 10px;
+    -ms-border-radius: 10px 0 0 10px;
+    -o-border-radius: 10px 0 0 10px;
+}
+
+.text-container {
+    padding: 33px 40px;
+    color: hsl(217, 19%, 35%);
+
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 28px;
+    letter-spacing: 0.3px;
+}
+
+.text {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.6px;
+
+}
+
+.footer {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    letter-spacing: 0.7px;
+    font-weight: 700;
+}
+
+.profile span {
+    font-weight: 500;
+    color: hsl(212, 23%, 69%);
+    
+}
+
+.profile img {
+    width: 40px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile p {
+    font-size: 12px;
+}
+
+.media {
+    position: absolute;
+    display: none;
+    /*justify-content: space-between;
+    */align-items: center;
+    width: 248px;
+    height: 55px;
+    background-color: hsl(217, 19%, 35%);
+    top: -84px;
+    right: -109px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.media::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translatex(-50%) rotate(45deg);
+    background-color: hsl(217, 19%, 35%);
+    -webkit-transform: translatex(-50%) rotate(45deg);
+    -moz-transform: translatex(-50%) rotate(45deg);
+    -ms-transform: translatex(-50%) rotate(45deg);
+    -o-transform: translatex(-50%) rotate(45deg);
+   
+}
+
+.media p {
+    color: hsl(212, 23%, 69%);
+    letter-spacing: 5px;
+    font-size: 12px;
+    padding-left:  37px;
+    flex-grow: 1;
+}
+
+.social:hover .media{
+    display: flex;
+}
+
+.social:hover > svg {
+    fill: white;
+}
+
+.social:hover {
+    background-color: hsl(212, 23%, 69%);
+}
+
+.social {
+    position: relative;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.social svg {
+    fill:hsl(217, 19%, 35%);
+}
+
+.social-img {
+    padding-right: 37px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+

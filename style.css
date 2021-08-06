@@ -28,8 +28,8 @@ body {
 
 .card {
     position: relative;
-    width: 730px;
-    height: 280px;
+    max-width: 730px;
+    min-height: 280px;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -175,13 +175,22 @@ body {
     background-color: hsl(212, 23%, 69%);
 }
 
-.social {
+.container-media {
     position: relative;
-    display: flex;
+    /* display: flex;
     width: 30px;
     height: 30px;
     align-items: center;
+    justify-content: center; */
+}
+
+.social {
+    position: relative;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    width: 30px;
+    height: 30px;
     background-color: hsl(210, 46%, 95%);
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -209,3 +218,76 @@ body {
     justify-content: space-between;
 }
 
+/* Mobile View */
+
+@media (max-width: 800px) {
+
+    .background {
+        width: 375px;
+        height: 667px;
+    }
+
+    .card {
+        flex-direction: column;
+        height: 512px;
+        width: 327px;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        object-position: center -17px;
+        border-radius: 10px 10px 0px 0px;
+        -webkit-border-radius: 10px 10px 0px 0px;
+        -moz-border-radius: 10px 10px 0px 0px;
+        -ms-border-radius: 10px 10px 0px 0px;
+        -o-border-radius: 10px 10px 0px 0px;
+    }
+
+    .text-container {
+        padding: 30px 32px;
+
+    }
+
+    .title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .footer {
+        margin-top: 35px;
+    }
+    
+    .media {
+        width: 327px;
+        height: 64px;
+        top: -11px;
+        left: -265px;
+        padding-right: 70px;
+        box-shadow: none;
+        border-radius: 0 0 10px 10px;
+        -webkit-border-radius: 0 0 10px 10px;
+        -moz-border-radius: 0 0 10px 10px;
+        -ms-border-radius: 0 0 10px 10px;
+        -o-border-radius: 0 0 10px 10px;
+    }
+
+    .media p {
+        padding-left: 32px;
+    }
+
+    .media::after {
+        display: none;
+    }
+
+    .social-img {
+        padding-right: 48px;
+    }
+
+    .visible-social {
+    background-color: hsl(212deg 23% 69% / 50%);
+    margin-top: 5px;
+    }
+
+}

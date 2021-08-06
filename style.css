@@ -45,6 +45,7 @@ body {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
     /* overflow: hidden; */
+    box-shadow: 0px 50px 50px -15px hsl(212deg 23% 69% / 25%)
 }
 
 .image-container img{
@@ -161,15 +162,16 @@ body {
     flex-grow: 1;
 }
 
-.social:hover .media{
+.media, .media::after {
+    box-shadow: 6px 10px 8px -3px hsl(212deg 23% 69% / 50%)
+}
+
+.visible{
     display: flex;
 }
 
-.social:hover > svg {
-    fill: white;
-}
 
-.social:hover {
+.visible-social {
     background-color: hsl(212, 23%, 69%);
 }
 
@@ -189,7 +191,15 @@ body {
 }
 
 .social svg {
-    fill:hsl(217, 19%, 35%);
+    fill:hsla(217, 19%, 35%, 0.7);
+}
+
+.visible-svg {
+    fill: white !important;
+}
+
+.visible-social {
+    background-color: rgba(72, 85, 106, 0.75);
 }
 
 .social-img {
